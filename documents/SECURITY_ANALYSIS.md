@@ -1,4 +1,4 @@
-# Decodex — Security Analysis Document
+# Lexi — Security Analysis Document
 
 **Version:** 1.0  
 **Date:** 2026-07-19  
@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary
 
-Decodex processes **children's voice recordings** and builds **persistent learning profiles**, making it a high-sensitivity application from a privacy and security perspective. This document identifies threat vectors, regulatory obligations, and architectural controls required to ship responsibly — especially in the Indian education market where COPPA-equivalent protections (DPDP Act 2023) and the "diagnostic" framing create specific legal surface area.
+Lexi processes **children's voice recordings** and builds **persistent learning profiles**, making it a high-sensitivity application from a privacy and security perspective. This document identifies threat vectors, regulatory obligations, and architectural controls required to ship responsibly — especially in the Indian education market where COPPA-equivalent protections (DPDP Act 2023) and the "diagnostic" framing create specific legal surface area.
 
 ### 1.1 Risk Classification
 
@@ -43,7 +43,7 @@ Decodex processes **children's voice recordings** and builds **persistent learni
 
 **Mitigation:**
 1. Never use "diagnosis" or "diagnostic" in user-facing copy without qualification
-2. Every public surface (website, app, reports) includes the disclaimer: *"Decodex is an educational screening and practice tool. It does not provide clinical diagnosis. For formal assessment, consult a qualified speech-language pathologist or educational psychologist."*
+2. Every public surface (website, app, reports) includes the disclaimer: *"Lexi is an educational screening and practice tool. It does not provide clinical diagnosis. For formal assessment, consult a qualified speech-language pathologist or educational psychologist."*
 3. Internal taxonomy uses "diagnostic" as a technical descriptor; external language uses **"reading insights"** or **"error pattern analysis"**
 4. Terms of Service explicitly disclaim medical advice
 
@@ -348,7 +348,7 @@ DELETE FROM users WHERE deleted_at < NOW() - INTERVAL '30 days';
 
 ### 6.1 OWASP Top 10 Mapping
 
-| OWASP Category | Risk Level | Decodex Exposure | Controls |
+| OWASP Category | Risk Level | Lexi Exposure | Controls |
 |----------------|-----------|------------------|----------|
 | **A01: Broken Access Control** | 🔴 High | IDOR on student profiles; role escalation | UUID-based IDs; server-side ownership checks; RBAC middleware |
 | **A02: Cryptographic Failures** | 🟡 Medium | PII at rest; passwords | bcrypt hashing; AES-256 at rest; TLS 1.3 in transit |

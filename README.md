@@ -1,11 +1,11 @@
-﻿# Decodex — AI-Powered Reading Screening & Assessment Platform for Dyslexia Education
+﻿# Lexi — AI-Powered Reading Screening & Assessment Platform for Dyslexia Education
 
-![CI](https://github.com/ADITYAMITTAL1604/DECODEX/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/ADITYAMITTAL1604/LEXI/actions/workflows/ci.yml/badge.svg)
 
-Decodex captures students reading aloud, transcribes via Whisper, aligns against source text with Needleman-Wunsch DP, classifies error patterns using Orton-Gillingham taxonomy (GPT-4o-mini), generates personalised practice drills, and gives teachers and parents actionable reading analytics with human-in-the-loop override capability.
+Lexi captures students reading aloud, transcribes via Whisper, aligns against source text with Needleman-Wunsch DP, classifies error patterns using Orton-Gillingham taxonomy (GPT-4o-mini), generates personalised practice drills, and gives teachers and parents actionable reading analytics with human-in-the-loop override capability.
 
 > **Educational screening tool — not a clinical assessment.**
-> Decodex is a reading screening and practice tool for educational use. It does **not** provide a clinical or medical diagnosis of dyslexia or any other condition. For formal assessment, consult a qualified speech-language pathologist or educational psychologist.
+> Lexi is a reading screening and practice tool for educational use. It does **not** provide a clinical or medical diagnosis of dyslexia or any other condition. For formal assessment, consult a qualified speech-language pathologist or educational psychologist.
 
 ---
 
@@ -13,12 +13,12 @@ Decodex captures students reading aloud, transcribes via Whisper, aligns against
 
 | Component | URL |
 |-----------|-----|
-| **Frontend** | [decodex-five.vercel.app](https://decodex-five.vercel.app/) |
-| **Backend Health** | [decodex-backend.onrender.com/health](https://decodex-backend.onrender.com/health) |
+| **Frontend** | [lexi-five.vercel.app](https://lexi-five.vercel.app/) |
+| **Backend Health** | [lexi-backend.onrender.com/health](https://lexi-backend.onrender.com/health) |
 
 This is a fully deployed full-stack application. The frontend is served by Vercel, the backend runs on Render, and the database is hosted on Supabase.
 
-**Test accounts:** `student@decodex.com` / `teacher@decodex.com` / `parent@decodex.com` — password `password123`
+**Test accounts:** `student@lexi.com` / `teacher@lexi.com` / `parent@lexi.com` — password `password123`
 
 ---
 
@@ -64,7 +64,7 @@ graph LR
 | **React** | 19 | Fast SPA with concurrent rendering |
 | **Vite** | 8 | Dev server with HMR; production bundler |
 | **TypeScript** | 6 (frontend) / 5 (backend) | End-to-end type safety |
-| **Tailwind CSS** | 4 | Utility-first styling with a custom Decodex design system |
+| **Tailwind CSS** | 4 | Utility-first styling with a custom Lexi design system |
 | **React Router** | 7 | Client-side routing |
 | **Recharts** | 3 | Data visualisation for teacher dashboards (WPM trends, error breakdowns) |
 | **Express** | 5 | Lightweight HTTP framework with native async/await route handlers |
@@ -87,7 +87,7 @@ All OpenAI API calls (Whisper and GPT-4o-mini) are wrapped in Opossum circuit br
 
 ### Consent-Gating Architecture
 
-Because Decodex processes children's reading data, parental consent is required before any audio recording can occur. The system uses:
+Because Lexi processes children's reading data, parental consent is required before any audio recording can occur. The system uses:
 - **Invite codes** for in-app parent-student linking
 - **Knowledge-based verification** (date of birth) with rate-limited attempts
 - **Consent withdrawal** with a 30-day hard-delete grace period
@@ -262,7 +262,7 @@ See [`documents/SECURITY_ANALYSIS.md`](documents/SECURITY_ANALYSIS.md) for the f
 
 ## Orton-Gillingham Error Taxonomy
 
-Decodex classifies every misread word into one of seven categories from the Orton-Gillingham reading methodology:
+Lexi classifies every misread word into one of seven categories from the Orton-Gillingham reading methodology:
 
 | Code | Category | Description |
 |------|----------|-------------|

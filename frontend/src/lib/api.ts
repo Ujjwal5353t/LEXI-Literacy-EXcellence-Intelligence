@@ -11,7 +11,7 @@ export function getApiBaseUrl(): string {
 
   // If deployed on Vercel and VITE_API_BASE_URL wasn't baked into the build, fallback to live Render backend
   if (!raw && typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) {
-    return 'https://decodex-backend.onrender.com';
+    return 'https://lexi-backend.onrender.com';
   }
 
   if (!raw) return '';
@@ -59,7 +59,7 @@ export async function apiFetch<T>(endpoint: string, options?: RequestInit): Prom
     return data as T;
   } catch (err: any) {
     if (err instanceof TypeError && err.message.toLowerCase().includes('failed to fetch')) {
-      throw new Error(`Unable to connect to Decodex backend (${targetUrl}). Please check your connection.`);
+      throw new Error(`Unable to connect to Lexi backend (${targetUrl}). Please check your connection.`);
     }
     throw err;
   }

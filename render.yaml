@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: decodex-backend
+    name: lexi-backend
     runtime: node
     region: oregon
     plan: free

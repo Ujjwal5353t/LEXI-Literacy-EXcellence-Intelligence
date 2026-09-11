@@ -45,7 +45,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch (e) {
       console.error('Logout failed', e);
     } finally {
-      localStorage.removeItem('decodex_token');
+      localStorage.removeItem('lexi_token');
       localStorage.clear();
       sessionStorage.clear();
       setUser(null);

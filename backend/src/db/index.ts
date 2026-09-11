@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const dbUrl = process.env.DATABASE_URL || 'postgresql://postgres:password@localhost:5432/decodex';
+const dbUrl = process.env.DATABASE_URL || 'postgresql://postgres:password@localhost:5432/lexi';
 
 const hasSsl = Boolean(
   dbUrl.includes('sslmode=require') ||

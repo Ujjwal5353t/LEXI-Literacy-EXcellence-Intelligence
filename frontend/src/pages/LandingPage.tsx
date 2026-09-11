@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import decodexLogo from '../assets/decodex-logo.jpg';
+import lexiLogo from '../assets/lexi-logo.jpg';
 import DexAvatar from '../components/DexAvatar';
 import { TUTOR_NAME } from '../lib/constants';
 
@@ -41,8 +41,8 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 flex flex-col items-center">
           <img
-            src={decodexLogo}
-            alt="Decodex Logo"
+            src={lexiLogo}
+            alt="Lexi Logo"
             className="w-28 h-28 object-contain mb-4 drop-shadow-md"
           />
 
@@ -56,7 +56,7 @@ export default function LandingPage() {
           </h1>
 
           <p className="font-body text-lg sm:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-8 student-text">
-            Decodex transcribes speech in real-time, screens reading difficulties using structured Orton-Gillingham taxonomy, and delivers adaptive multisensory learning plans.
+            Lexi transcribes speech in real-time, screens reading difficulties using structured Orton-Gillingham taxonomy, and delivers adaptive multisensory learning plans.
           </p>
 
           {/* Call to Action Buttons */}
@@ -154,7 +154,7 @@ export default function LandingPage() {
       <section className="py-12 border-t border-surface-variant/40">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-extrabold text-on-surface">Why Decodex Works</h2>
+            <h2 className="font-display text-3xl font-extrabold text-on-surface">Why Lexi Works</h2>
             <p className="font-body text-base text-on-surface-variant mt-2 student-text">Built on proven structured literacy and speech-processing technology</p>
           </div>
 
@@ -166,7 +166,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="font-display text-xl font-bold text-on-surface mb-3">Real-Time Speech STT Engine</h3>
                 <p className="font-body text-on-surface-variant text-sm leading-relaxed student-text">
-                  Students read aloud into the microphone. Decodex aligns speech to target text, calculating exact Words Per Minute (WPM) and word mispronunciations.
+                  Students read aloud into the microphone. Lexi aligns speech to target text, calculating exact Words Per Minute (WPM) and word mispronunciations.
                 </p>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function LandingPage() {
       {/* How It Works (3 Steps) */}
       <section className="py-12 bg-white/40 rounded-3xl border border-white/60 shadow-sm my-8">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl font-extrabold text-on-surface mb-2">How Decodex Operates</h2>
+          <h2 className="font-display text-3xl font-extrabold text-on-surface mb-2">How Lexi Operates</h2>
           <p className="font-body text-base text-on-surface-variant mb-10 student-text">Three simple steps to personalized reading growth</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -255,7 +255,7 @@ export default function LandingPage() {
               to="/login"
               className="w-full sm:w-auto h-12 px-8 rounded-2xl bg-primary text-on-primary font-display text-sm font-bold uppercase tracking-wider transition-all shadow-md hover:bg-on-primary-fixed-variant flex items-center justify-center gap-2"
             >
-              Log In to Decodex
+              Log In to Lexi
             </Link>
             <Link
               to="/register"

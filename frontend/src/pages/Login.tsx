@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { useAuth } from '../context/AuthContext';
 import { apiFetch } from '../lib/api';
-import decodexLogo from '../assets/decodex-logo.jpg';
+import lexiLogo from '../assets/lexi-logo.jpg';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -41,8 +41,8 @@ export default function Login() {
         className="w-full max-w-[440px] glass-card rounded-3xl p-8 sm:p-10 relative z-10 shadow-[0_20px_50px_rgba(0,100,116,0.10)] flex flex-col gap-6"
       >
         <div className="flex flex-col items-center justify-center text-center">
-          <img alt="Decodex Logo" className="w-24 h-24 object-contain mb-3 drop-shadow-md" src={decodexLogo} />
-          <h1 className="font-display text-2xl font-extrabold text-primary mb-1">Welcome Back to Decodex</h1>
+          <img alt="Lexi Logo" className="w-24 h-24 object-contain mb-3 drop-shadow-md" src={lexiLogo} />
+          <h1 className="font-display text-2xl font-extrabold text-primary mb-1">Welcome Back to Lexi</h1>
           <p className="font-body text-sm text-on-surface-variant font-medium">Understand how every child reads</p>
         </div>
 
@@ -59,7 +59,7 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full h-12 pl-12 pr-4 glass-input rounded-xl font-body text-base text-on-surface placeholder-outline-variant focus:outline-none"
-                placeholder="teacher@decodex.com"
+                placeholder="teacher@lexi.com"
                 required
               />
             </div>

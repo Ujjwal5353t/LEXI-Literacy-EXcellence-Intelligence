@@ -112,7 +112,7 @@ describe('Copilot Parent Communication Language', () => {
     expect(strategy.parentCommunicationDraft).toContain('improvement plan');
     expect(strategy.parentCommunicationDraft).toContain('How you can help at home');
     expect(strategy.parentCommunicationDraft).toContain('Warm regards');
-    expect(strategy.parentCommunicationDraft).toContain('Decodex Teaching Team');
+    expect(strategy.parentCommunicationDraft).toContain('Lexi Teaching Team');
   });
 
   it('should default to English when parent preferred_language is not set', async () => {

@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { apiFetch } from '../lib/api';
-import decodexLogo from '../assets/decodex-logo.jpg';
+import lexiLogo from '../assets/lexi-logo.jpg';
 
 type AccountType = 'student' | 'parent';
 const fieldControlClass = 'h-12 w-full glass-input rounded-xl px-4 font-body text-base text-on-surface outline-none transition-all focus:outline-none';
@@ -61,10 +61,10 @@ export default function Register() {
         className="mx-auto w-full max-w-[480px] glass-card rounded-3xl p-8 sm:p-10 shadow-[0_20px_50px_rgba(0,100,116,0.10)] relative z-10"
       >
         <div className="mb-6 text-center flex flex-col items-center">
-          <img alt="Decodex Logo" className="w-20 h-20 object-contain mb-2 drop-shadow-sm" src={decodexLogo} />
-          <p className="font-display text-[11px] font-bold uppercase tracking-[0.12em] text-on-surface-variant">Decodex Account</p>
+          <img alt="Lexi Logo" className="w-20 h-20 object-contain mb-2 drop-shadow-sm" src={lexiLogo} />
+          <p className="font-display text-[11px] font-bold uppercase tracking-[0.12em] text-on-surface-variant">Lexi Account</p>
           <h1 className="mt-1 font-display text-2xl sm:text-3xl font-extrabold text-primary">Create Your Account</h1>
-          <p className="mt-1 font-body text-sm text-on-surface-variant">Choose the account that fits how you use Decodex.</p>
+          <p className="mt-1 font-body text-sm text-on-surface-variant">Choose the account that fits how you use Lexi.</p>
         </div>
 
         <div className="mb-5 grid grid-cols-2 rounded-xl bg-surface-container/60 p-1 backdrop-blur-md" role="tablist" aria-label="Account type">
@@ -179,7 +179,7 @@ export default function Register() {
         {accountType === 'student' && (
           <div className="mt-5 flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10">
             <span className="material-symbols-outlined text-2xl text-primary" style={{fontVariationSettings: "'FILL' 1"}}>auto_awesome</span>
-            <p className="font-body text-xs text-on-surface-variant leading-snug">Welcome to Decodex! Let's start your reading adventure! 🌟</p>
+            <p className="font-body text-xs text-on-surface-variant leading-snug">Welcome to Lexi! Let's start your reading adventure! 🌟</p>
           </div>
         )}
 

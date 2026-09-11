@@ -1,8 +1,8 @@
 {
-  "name": "decodex",
+  "name": "lexi",
   "private": true,
   "version": "0.0.0",
-  "description": "Root workspace helpers for the Decodex monorepo.",
+  "description": "Root workspace helpers for the Lexi monorepo.",
   "license": "UNLICENSED",
   "scripts": {
     "install": "npm run skills:install",
