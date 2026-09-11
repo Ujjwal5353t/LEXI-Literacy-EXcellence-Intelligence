@@ -59,7 +59,7 @@ const riskConfig = {
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/20 text-primary font-display text-[10px] font-bold uppercase tracking-widest mb-2">
             <span className="material-symbols-outlined text-sm">smart_toy</span>
-            Decodex Copilot
+            Lexi Copilot
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-primary">AI Intervention Copilot</h1>
           <p className="font-body text-base text-on-surface-variant mt-1">Generate a comprehensive intervention strategy</p>

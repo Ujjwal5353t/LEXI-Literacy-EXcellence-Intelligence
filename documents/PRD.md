@@ -1,4 +1,4 @@
-# Decodex — Product Requirements Document (PRD)
+# Lexi — Product Requirements Document (PRD)
 
 **Version:** 1.0  
 **Date:** 2026-07-19  
@@ -9,9 +9,9 @@
 
 ## 1. Executive Summary
 
-**Decodex** is a diagnostic-first AI reading companion that listens to a child read aloud, identifies *why* they struggle (not just *that* they struggle), generates targeted structured-literacy drills, and tracks the evolving error profile across sessions for teachers and parents.
+**Lexi** is a diagnostic-first AI reading companion that listens to a child read aloud, identifies *why* they struggle (not just *that* they struggle), generates targeted structured-literacy drills, and tracks the evolving error profile across sessions for teachers and parents.
 
-Unlike every existing competitor in the dyslexia edtech space — Speechify, Kurzweil 3000, DyslexiaBuddy, OrCam Learn — which optimize for *consumption* (reading text aloud, reformatting it visually), Decodex optimizes for *improvement* by surfacing specific decoding gaps continuously through normal reading practice.
+Unlike every existing competitor in the dyslexia edtech space — Speechify, Kurzweil 3000, DyslexiaBuddy, OrCam Learn — which optimize for *consumption* (reading text aloud, reformatting it visually), Lexi optimizes for *improvement* by surfacing specific decoding gaps continuously through normal reading practice.
 
 ---
 
@@ -39,7 +39,7 @@ Every existing dyslexia edtech product is **assistive** (text-to-speech, OCR, vi
 
 ### 3.1 Core Value Proposition
 
-| Dimension | Competitors | Decodex |
+| Dimension | Competitors | Lexi |
 |-----------|-------------|---------|
 | **Philosophy** | Accommodate the diagnosis | *Become* the diagnosis |
 | **Input** | Text to be consumed | Student reading aloud |
@@ -164,7 +164,7 @@ Every existing dyslexia edtech product is **assistive** (text-to-speech, OCR, vi
 
 ### 7.1 Competitor Matrix
 
-| Competitor | Type | Diagnostic? | Drill Generation? | Persistent Profile? | Price Point | Key Weakness vs. Decodex |
+| Competitor | Type | Diagnostic? | Drill Generation? | Persistent Profile? | Price Point | Key Weakness vs. Lexi |
 |------------|------|-------------|--------------------|--------------------|-------------|--------------------------|
 | **Speechify** | TTS / reading tool | ❌ | ❌ | ❌ | Free / $139/yr | Pure consumption; no diagnostic signal |
 | **Microsoft Immersive Reader** | TTS + visual formatting | ❌ | ❌ | ❌ | Free (bundled) | Strong distribution but zero diagnosis |
@@ -173,9 +173,9 @@ Every existing dyslexia edtech product is **assistive** (text-to-speech, OCR, vi
 | **OrCam Learn** | Hardware reading pen | ❌ | ❌ | ❌ | $1,990 (device) | Hardware-locked, no software diagnostic loop |
 | **Goblin Tools** | Neurodivergent toolkit | ❌ | ❌ | ❌ | Free / paid | Broad ND support, not dyslexia-specific |
 
-### 7.2 Decodex's Whitespace
+### 7.2 Lexi's Whitespace
 
-Every competitor assumes the student's weaknesses are **already known** via a formal diagnosis and builds tools to work *around* them. Decodex sits **upstream** — surfacing the weaknesses continuously through normal reading practice, using LLM classification to turn an ordinary reading session into structured diagnostic signal at near-zero marginal cost.
+Every competitor assumes the student's weaknesses are **already known** via a formal diagnosis and builds tools to work *around* them. Lexi sits **upstream** — surfacing the weaknesses continuously through normal reading practice, using LLM classification to turn an ordinary reading session into structured diagnostic signal at near-zero marginal cost.
 
 ---
 
@@ -254,7 +254,7 @@ Every competitor assumes the student's weaknesses are **already known** via a fo
 
 | Term | Definition |
 |------|------------|
-| **Orton-Gillingham (O-G)** | A structured-literacy approach to teaching reading, widely used for dyslexia intervention. Defines error categories used in Decodex's classification taxonomy. |
+| **Orton-Gillingham (O-G)** | A structured-literacy approach to teaching reading, widely used for dyslexia intervention. Defines error categories used in Lexi's classification taxonomy. |
 | **Phoneme** | The smallest unit of sound in speech (e.g., the /b/ in "bat"). |
 | **Grapheme** | A letter or group of letters representing a phoneme (e.g., "ph" → /f/). |
 | **G2P** | Grapheme-to-Phoneme conversion — mapping written letters to their expected sounds. |

@@ -1,10 +1,10 @@
-﻿# Decodex Privacy Policy
+﻿# Lexi Privacy Policy
 
 **Effective Date:** August 8, 2026  
 **Last Updated:** August 8, 2026  
 **Applicable Jurisdiction:** India (Primary Launch Market)
 
-Decodex ("**Decodex**", "**we**", "**us**", or "**our**") operates the AI-powered reading screening and assessment platform accessible at `decodex-five.vercel.app` and associated backend API services (the "**Platform**"). Decodex is designed for educational use by students (ages 6–14), parents, teachers, and school administrators.
+Lexi ("**Lexi**", "**we**", "**us**", or "**our**") operates the AI-powered reading screening and assessment platform accessible at `lexi-five.vercel.app` and associated backend API services (the "**Platform**"). Lexi is designed for educational use by students (ages 6–14), parents, teachers, and school administrators.
 
 This Privacy Policy explains how we collect, use, store, disclose, and protect personal data in compliance with the **Digital Personal Data Protection Act, 2023 ("DPDP Act")**, the **Information Technology Act, 2000**, and the **Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 ("SPDI Rules")**.
 
@@ -13,30 +13,30 @@ This Privacy Policy explains how we collect, use, store, disclose, and protect p
 ## 1. Important Notice & Educational Disclaimer
 
 > **⚠️ Educational Screening Tool — Not a Medical Diagnosis**  
-> **Decodex is an educational screening and practice tool. It does not provide a clinical or medical diagnosis of dyslexia or any other neurological, developmental, or medical condition. For formal diagnostic assessment, consult a qualified speech-language pathologist, educational psychologist, or medical specialist.**
+> **Lexi is an educational screening and practice tool. It does not provide a clinical or medical diagnosis of dyslexia or any other neurological, developmental, or medical condition. For formal diagnostic assessment, consult a qualified speech-language pathologist, educational psychologist, or medical specialist.**
 
 ---
 
 ## 2. Identity of Data Fiduciary & Grievance Redressal Officer
 
-Under the DPDP Act, 2023, Decodex acts as the **Data Fiduciary** responsible for determining the purpose and means of processing personal data.
+Under the DPDP Act, 2023, Lexi acts as the **Data Fiduciary** responsible for determining the purpose and means of processing personal data.
 
 ### 2.1 Grievance Redressal Officer
-In accordance with Section 13 of the DPDP Act and Rule 5(9) of the SPDI Rules, Decodex has designated a Grievance Officer to address questions, concerns, or complaints regarding data processing, consent, or privacy rights:
+In accordance with Section 13 of the DPDP Act and Rule 5(9) of the SPDI Rules, Lexi has designated a Grievance Officer to address questions, concerns, or complaints regarding data processing, consent, or privacy rights:
 
 * **Attn:** Data Protection & Grievance Redressal Officer  
-* **Platform:** Decodex Legal & Privacy Division  
-* **Email:** `privacy@decodex.com` / `grievance@decodex.com`  
+* **Platform:** Lexi Legal & Privacy Division  
+* **Email:** `privacy@lexi.com` / `grievance@lexi.com`  
 * **Response Window:** Acknowledgement within 24 hours; resolution within 7 business days.
 
 ---
 
 ## 3. Special Provisions for Children’s Data (DPDP Act §9 Compliance)
 
-In compliance with **Section 2(f)** of the DPDP Act, 2023, any individual who has not completed 18 years of age is defined as a **child**. Because Decodex is intended for primary and middle school students (ages 6–14):
+In compliance with **Section 2(f)** of the DPDP Act, 2023, any individual who has not completed 18 years of age is defined as a **child**. Because Lexi is intended for primary and middle school students (ages 6–14):
 
 1. **Verifiable Parental Consent (VPC):** We do not collect, process, or record personal data or voice audio from any child without prior, verifiable consent from a parent or lawful guardian.
-2. **Prohibition of Behavioral Tracking & Targeted Ads:** In strict compliance with **Section 9(2)** of the DPDP Act, Decodex does **NOT**:
+2. **Prohibition of Behavioral Tracking & Targeted Ads:** In strict compliance with **Section 9(2)** of the DPDP Act, Lexi does **NOT**:
    * Conduct behavioral monitoring or tracking of children across third-party websites or services.
    * Serve targeted, personalized, or behavioral advertisements to children.
    * Sell, monetize, or rent student personal data or voice recordings to third parties.
@@ -53,7 +53,7 @@ We collect only the personal data necessary to provide reading screening, error 
 * **Parent & Teacher Accounts:** Email address, password hash (encrypted using `bcrypt` with cost factor 12), display name, role (`parent`, `teacher`, `admin`), preferred language, and assigned school ID (`school_id`).
 
 ### 4.2 Voice Audio Recordings & Speech Transcripts
-* **Raw Audio Recordings:** When a student reads a passage aloud, their voice recording is captured by the browser microphone and transmitted to our server. **Decodex stores the raw audio recording in a private object storage bucket** (local disk by default, or Supabase Storage when configured) — **not in the PostgreSQL database**. Audio is referenced in the database by a storage key (`reading_sessions.audio_storage_key`), MIME type, size, and provider. Legacy `audio_base64` and `audio_file_path` columns are deprecated and no longer written for new uploads.
+* **Raw Audio Recordings:** When a student reads a passage aloud, their voice recording is captured by the browser microphone and transmitted to our server. **Lexi stores the raw audio recording in a private object storage bucket** (local disk by default, or Supabase Storage when configured) — **not in the PostgreSQL database**. Audio is referenced in the database by a storage key (`reading_sessions.audio_storage_key`), MIME type, size, and provider. Legacy `audio_base64` and `audio_file_path` columns are deprecated and no longer written for new uploads.
 * **Speech-to-Text (STT) Transcripts:** Text transcriptions generated from student voice recordings via speech-to-text engines (OpenAI Whisper / Groq).
 
 ### 4.3 Educational & Error Analysis Data
@@ -85,9 +85,9 @@ Under Section 4 of the DPDP Act, 2023, we process personal data strictly for law
 ## 6. Audio Recording Storage & Retention Policy
 
 ### 6.1 Object Storage Architecture (V5)
-As of V5, Decodex stores student voice recordings in a **private object storage bucket** rather than as base64 blobs in PostgreSQL. The storage backend is configurable:
+As of V5, Lexi stores student voice recordings in a **private object storage bucket** rather than as base64 blobs in PostgreSQL. The storage backend is configurable:
 * **Local Disk (default for development/testing):** Files stored under `./audio-storage/{studentId}/{sessionId}.{ext}` with access restricted to the application process.
-* **Supabase Storage (production):** Files stored in a private Supabase Storage bucket (`decodex-audio` by default) with row-level security and signed URL access.
+* **Supabase Storage (production):** Files stored in a private Supabase Storage bucket (`lexi-audio` by default) with row-level security and signed URL access.
 * **Future S3-compatible:** The storage abstraction layer supports pluggable providers.
 
 Audio is referenced in the database by a canonical storage key (`reading_sessions.audio_storage_key`), MIME type (`audio_mime_type`), size in bytes (`audio_size_bytes`), and provider (`audio_storage_provider`). Legacy columns `audio_base64` and `audio_file_path` are retained for backward compatibility with pre-V5 sessions but are **no longer written for new uploads** (set to `NULL`).
@@ -102,7 +102,7 @@ Parents have the absolute right to:
 
 ## 7. Third-Party Subprocessors & Cross-Border Data Transfers
 
-To deliver real-time speech processing and cloud database management, Decodex shares specific data elements with trusted third-party service providers (**Data Processors**).
+To deliver real-time speech processing and cloud database management, Lexi shares specific data elements with trusted third-party service providers (**Data Processors**).
 
 ### 7.1 Named Subprocessors
 
@@ -116,7 +116,7 @@ To deliver real-time speech processing and cloud database management, Decodex sh
 | **Google LLC (Gmail SMTP)** | Consent Verification & Notification Email Delivery | Parent email address, student display name, verification link | Global / USA |
 
 ### 7.2 Cross-Border Transfer Disclosure (DPDP Act §16)
-Decodex’s backend servers, databases, and AI processing infrastructure are hosted in the **United States (Oregon & California)**. 
+Lexi’s backend servers, databases, and AI processing infrastructure are hosted in the **United States (Oregon & California)**. 
 
 Under **Section 16 of the DPDP Act, 2023**, cross-border transfer of personal data outside India is permitted unless explicitly restricted by a notification issued by the Central Government of India. Currently, no negative-list restriction prohibits educational data transfers to the United States. By granting parental consent, parents explicitly authorize the transfer, processing, and storage of encrypted personal data and voice recordings on secure servers located in the United States, subject to equivalent technical safeguards (TLS 1.3 encryption in transit, AES-256 at rest).
 
@@ -124,7 +124,7 @@ Under **Section 16 of the DPDP Act, 2023**, cross-border transfer of personal da
 
 ## 8. Verifiable Parental Consent Flow & Lifecycle
 
-Decodex implements a two-step consent verification mechanism before microphone access is unlocked (`requireConsent` middleware):
+Lexi implements a two-step consent verification mechanism before microphone access is unlocked (`requireConsent` middleware):
 
 ```
 1. PARENT REGISTRATION & LINKING
@@ -147,7 +147,7 @@ Decodex implements a two-step consent verification mechanism before microphone a
 
 ## 9. Security Safeguards
 
-Decodex enforces technical and organizational security measures to protect sensitive educational data:
+Lexi enforces technical and organizational security measures to protect sensitive educational data:
 
 * **Password Security:** Passwords are hashed using `bcrypt` with a cost factor of 12. Plaintext passwords are never stored or logged.
 * **Authentication Security:** Authentication credentials use JSON Web Tokens (JWT) stored exclusively in `httpOnly`, `Secure`, `SameSite=Strict` cookies. Tokens are not stored in unencrypted browser `localStorage`.
@@ -163,10 +163,10 @@ Under the DPDP Act, 2023, parents (on behalf of child Data Principals) and adult
 
 1. **Right to Access Information (DPDP §11):** Request a summary of personal data processed, error profiles, and third parties with whom data has been shared.
 2. **Right to Correction and Erasure (DPDP §12):** Request correction of inaccurate personal data or complete erasure of student accounts, voice recordings, and reading histories.
-3. **Right of Grievance Redressal (DPDP §13):** Contact our Grievance Officer (`grievance@decodex.com`) for resolution of any complaints within 7 business days.
+3. **Right of Grievance Redressal (DPDP §13):** Contact our Grievance Officer (`grievance@lexi.com`) for resolution of any complaints within 7 business days.
 4. **Right to Nominate (DPDP §14):** Nominate an individual to exercise data rights in the event of death or incapacity.
 
-To exercise any of these rights, email `privacy@decodex.com`. Requests are processed free of charge after identity verification.
+To exercise any of these rights, email `privacy@lexi.com`. Requests are processed free of charge after identity verification.
 
 ---
 
@@ -174,12 +174,12 @@ To exercise any of these rights, email `privacy@decodex.com`. Requests are proce
 
 Under **Section 10 of the DPDP Act, 2023**, the Central Government of India may designate certain entities as **Significant Data Fiduciaries (SDFs)** based on the volume and sensitivity of personal data processed, especially children's data.
 
-**Decodex Flag:** Decodex currently operates as a standard Data Fiduciary. However, because we process children's voice recordings, reading health metrics, and special education records at scale, Decodex monitors its processing volume against government notification thresholds. Upon crossing SDF thresholds, Decodex will formally appoint a resident Data Protection Officer (DPO) in India, conduct periodic Data Protection Impact Assessments (DPIAs), and engage independent data auditors.
+**Lexi Flag:** Lexi currently operates as a standard Data Fiduciary. However, because we process children's voice recordings, reading health metrics, and special education records at scale, Lexi monitors its processing volume against government notification thresholds. Upon crossing SDF thresholds, Lexi will formally appoint a resident Data Protection Officer (DPO) in India, conduct periodic Data Protection Impact Assessments (DPIAs), and engage independent data auditors.
 
 ---
 
 ## 12. Data Breach Notification Commitment
 
-In the event of a personal data breach affecting student records or voice audio, Decodex will, in accordance with the DPDP Act and CERT-In guidelines:
+In the event of a personal data breach affecting student records or voice audio, Lexi will, in accordance with the DPDP Act and CERT-In guidelines:
 1. Notify the **Data Protection Board of India (DPBI)** without delay.
 2. Notify affected parents, teachers, and school administrators detailing the nature of the breach, affected data categories, and remedial steps taken.

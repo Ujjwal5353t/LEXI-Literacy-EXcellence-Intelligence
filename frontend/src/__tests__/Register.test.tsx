@@ -14,7 +14,7 @@ vi.mock('../lib/api', () => ({
 }));
 
 // Mock the logo import
-vi.mock('../assets/decodex-logo.png', () => ({ default: 'mock-logo.png' }));
+vi.mock('../assets/lexi-logo.png', () => ({ default: 'mock-logo.png' }));
 
 // Mock sonner toast
 vi.mock('sonner', () => ({
@@ -49,7 +49,7 @@ describe('Register Page', () => {
   });
 
   it('should show error message on API failure', async () => {
-    mockApiFetch.mockRejectedValueOnce(new Error('Unable to connect to Decodex backend'));
+    mockApiFetch.mockRejectedValueOnce(new Error('Unable to connect to Lexi backend'));
 
     renderRegister();
     
@@ -63,7 +63,7 @@ describe('Register Page', () => {
     await user.click(submitBtn);
 
     await waitFor(() => {
-      expect(toast.error).toHaveBeenCalledWith('Unable to connect to Decodex backend');
+      expect(toast.error).toHaveBeenCalledWith('Unable to connect to Lexi backend');
     });
   });
 

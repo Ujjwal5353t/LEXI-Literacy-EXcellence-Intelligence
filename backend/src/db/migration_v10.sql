@@ -3,7 +3,7 @@
 -- =============================================================================
 
 INSERT INTO schools (id, name, district)
-VALUES ('99999999-9999-9999-9999-999999999999', 'Decodex Demo School', 'Demo District')
+VALUES ('99999999-9999-9999-9999-999999999999', 'Lexi Demo School', 'Demo District')
 ON CONFLICT (id) DO UPDATE
 SET name = EXCLUDED.name,
     district = EXCLUDED.district;
@@ -11,5 +11,5 @@ SET name = EXCLUDED.name,
 UPDATE users
 SET school_id = '99999999-9999-9999-9999-999999999999',
     updated_at = NOW()
-WHERE email IN ('teacher@decodex.com', 'student@decodex.com', 'demostudent@decodex.com')
+WHERE email IN ('teacher@lexi.com', 'student@lexi.com', 'demostudent@lexi.com')
   AND deleted_at IS NULL;

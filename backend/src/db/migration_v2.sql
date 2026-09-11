@@ -1,5 +1,5 @@
 -- =============================================================================
--- Decodex Schema V2 — AI Intervention Platform Extension
+-- Lexi Schema V2 — AI Intervention Platform Extension
 -- Run AFTER schema.sql has been applied.
 -- =============================================================================
 
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS iep_documents (
 CREATE INDEX IF NOT EXISTS idx_iep_documents_student ON iep_documents(student_id, created_at DESC);
 
 -- ---------------------------------------------------------------------------
--- 7. Copilot Sessions — Decodex Copilot intervention strategy history
+-- 7. Copilot Sessions — Lexi Copilot intervention strategy history
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS copilot_sessions (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),

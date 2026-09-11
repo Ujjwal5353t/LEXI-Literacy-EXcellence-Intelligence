@@ -1,5 +1,5 @@
 -- =============================================================================
--- Decodex Schema V3 — Multi-Language Support Foundation
+-- Lexi Schema V3 — Multi-Language Support Foundation
 -- Run AFTER migration_v2.sql has been applied.
 -- =============================================================================
 

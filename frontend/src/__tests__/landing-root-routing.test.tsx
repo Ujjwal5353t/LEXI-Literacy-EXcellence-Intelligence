@@ -6,7 +6,7 @@ import LandingPage from '../pages/LandingPage';
 
 const teacherUser = {
   id: '33333333-3333-3333-3333-333333333333',
-  email: 'teacher@decodex.com',
+  email: 'teacher@lexi.com',
   role: 'teacher' as const,
   display_name: 'Teacher Demo',
 };
@@ -21,7 +21,7 @@ vi.mock('../context/AuthContext', () => ({
   }),
 }));
 
-vi.mock('../assets/decodex-logo.png', () => ({ default: 'mock-logo.png' }));
+vi.mock('../assets/lexi-logo.png', () => ({ default: 'mock-logo.png' }));
 
 vi.mock('../components/DexAvatar', () => ({
   default: () => <div data-testid="dex-avatar" />,
@@ -49,7 +49,7 @@ describe('root landing routing', () => {
 
     expect(await screen.findByRole('heading', { name: /Understand How Every Child Reads/i })).toBeInTheDocument();
     expect(screen.queryByText('Teacher Dashboard View')).not.toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /^Decodex$/i })).toHaveAttribute('href', '/');
+    expect(screen.getByRole('link', { name: /^Lexi$/i })).toHaveAttribute('href', '/');
     expect(screen.getByRole('link', { name: /^Dashboard$/i })).toHaveAttribute('href', '/teacher/dashboard');
   });
 

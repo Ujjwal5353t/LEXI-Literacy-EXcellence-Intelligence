@@ -6,7 +6,7 @@ import { getCache, setCache } from './cache';
 dotenv.config();
 
 // ---------------------------------------------------------------------------
-// Decodex TTS Service — Synthesizes speech from transcript text on-demand.
+// Lexi TTS Service — Synthesizes speech from transcript text on-demand.
 // Wraps OpenAI TTS API (tts-1, nova voice) in an opossum circuit breaker.
 // On failure/breaker-open, returns { useBrowserTts: true } so callers can
 // fall back silently to the browser's SpeechSynthesis API — never throws.

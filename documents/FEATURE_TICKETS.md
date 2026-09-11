@@ -1,4 +1,4 @@
-# Decodex — Feature Ticket List
+# Lexi — Feature Ticket List
 
 **Version:** 1.0  
 **Date:** 2026-07-19  
@@ -231,7 +231,7 @@
 |----|-------|----------|------|------|-------------|---------------------|
 | DEX-092 | Draft and publish Privacy Policy | P0 | M | Task | — | Covers: data collected, data usage, data retention, third-party processors (OpenAI), children's privacy, parental consent, data deletion rights; linked from all pages |
 | DEX-093 | Draft and publish Terms of Service | P0 | M | Task | — | Includes "not a clinical diagnosis" disclaimer; limitation of liability; acceptable use; data licensing terms |
-| DEX-094 | Add disclaimer banner to all user-facing surfaces | P0 | S | Task | DEX-002 | Footer text on every page: "Decodex is an educational screening tool, not a clinical diagnosis." |
+| DEX-094 | Add disclaimer banner to all user-facing surfaces | P0 | S | Task | DEX-002 | Footer text on every page: "Lexi is an educational screening tool, not a clinical diagnosis." |
 | DEX-095 | Implement cookie consent banner (if applicable) | P1 | M | Feature | DEX-002 | Cookie consent popup with accept/reject; only set analytics cookies after consent; no cookies required for core functionality |
 
 ---

@@ -3,7 +3,7 @@ import { getLatestHealthScore } from './healthScore';
 import { getLatestScreening } from './riskScreening';
 
 // ---------------------------------------------------------------------------
-// Decodex Copilot — Flagship Feature
+// Lexi Copilot — Flagship Feature
 // Generates a comprehensive intervention strategy for a student.
 // Includes: summary, key concerns, weekly roadmap, exercises, parent comm draft.
 // ---------------------------------------------------------------------------
@@ -278,7 +278,7 @@ function generateWeeklyRoadmap(topCategories: string[], gradeLevel: number): Wee
     ],
     activities: [
       'Read a new passage applying all strategies',
-      'Complete a Decodex assessment session',
+      'Complete a Lexi assessment session',
       'Review progress dashboard with teacher',
     ],
   });
@@ -326,7 +326,7 @@ function generateParentCommunication(
     en: {
       greeting: 'Dear Parent/Guardian,',
       intro: (name: string, score: number) =>
-        `I wanted to share an update on ${name}'s reading progress in our Decodex program.\n\n` +
+        `I wanted to share an update on ${name}'s reading progress in our Lexi program.\n\n` +
         `${name} is currently reading at a Health Score of ${score} out of 100. ` +
         (score >= 75
           ? `This represents strong progress, and we're working to build on these achievements.`
@@ -338,10 +338,10 @@ function generateParentCommunication(
       help: `How you can help at home:\n` +
         `  • Encourage daily reading practice (if not a whole story, reading even a small part of a story daily is essential!)\n` +
         `  • Listen to ${name} read aloud and praise effort (not just accuracy)\n` +
-        `  • Use the Decodex parent dashboard to track weekly progress\n` +
+        `  • Use the Lexi parent dashboard to track weekly progress\n` +
         `  • Celebrate milestones — every improvement matters!`,
       closing: `Please don't hesitate to reach out if you have questions about ${name}'s progress or the intervention plan.`,
-      signature: 'Warm regards,\nThe Decodex Teaching Team',
+      signature: 'Warm regards,\nThe Lexi Teaching Team',
     },
     hi: {
       greeting: 'प्रिय अभिभावक/पालक,',

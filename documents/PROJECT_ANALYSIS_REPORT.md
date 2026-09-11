@@ -1,4 +1,4 @@
-# Decodex — Comprehensive Project Analysis Report
+# Lexi — Comprehensive Project Analysis Report
 
 **Date:** 2026-07-19  
 **Stage:** Ideation / Pre-Code (Documentation Only)  
@@ -8,7 +8,7 @@
 ---
 
 > [!IMPORTANT]
-> **This analysis evaluates Decodex at the ideation/documentation stage.** There is zero code written. All ratings reflect the quality, depth, and production-readiness of the *planning artifacts* — the architecture, security posture, product thinking, and technical specification — not the implementation itself. Ratings marked with ⚠️ indicate areas that cannot be fully evaluated until code exists.
+> **This analysis evaluates Lexi at the ideation/documentation stage.** There is zero code written. All ratings reflect the quality, depth, and production-readiness of the *planning artifacts* — the architecture, security posture, product thinking, and technical specification — not the implementation itself. Ratings marked with ⚠️ indicate areas that cannot be fully evaluated until code exists.
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### What Problem This Solves
 
-Decodex addresses the **diagnosis bottleneck in dyslexia education**. ~35 million Indian children (10–15% of 229M enrolled students) struggle with reading decoding, but formal diagnosis requires expensive, scarce specialists (SLPs, educational psychologists). Teachers see the struggle daily but lack tools to identify *which specific error patterns* a child exhibits. Every existing edtech tool is *assistive* (reads for the child, reformats text); none are *diagnostic* (identifies why the child struggles and generates targeted practice).
+Lexi addresses the **diagnosis bottleneck in dyslexia education**. ~35 million Indian children (10–15% of 229M enrolled students) struggle with reading decoding, but formal diagnosis requires expensive, scarce specialists (SLPs, educational psychologists). Teachers see the struggle daily but lack tools to identify *which specific error patterns* a child exhibits. Every existing edtech tool is *assistive* (reads for the child, reformats text); none are *diagnostic* (identifies why the child struggles and generates targeted practice).
 
 **Ref:** [PRD.md §2](file:///d:/New%20folder/documents/PRD.md#L18-L33)
 
@@ -64,7 +64,7 @@ Decodex addresses the **diagnosis bottleneck in dyslexia education**. ~35 millio
 
 ### Executive Summary
 
-> Decodex is an exceptionally well-documented **hackathon MVP** with a genuine whitespace opportunity — no competitor in the dyslexia edtech space offers continuous diagnostic profiling from ordinary reading practice. The documentation quality (PRD + TRD + Security + Frontend Spec + 99 tickets) is at a level typically seen in Series A startups, not hackathon teams. The three hardest technical problems (ASR/reading error disambiguation, classification ground truth, child data privacy) are explicitly identified and have concrete mitigation strategies documented. The project has strong portfolio value and genuine product-market potential.
+> Lexi is an exceptionally well-documented **hackathon MVP** with a genuine whitespace opportunity — no competitor in the dyslexia edtech space offers continuous diagnostic profiling from ordinary reading practice. The documentation quality (PRD + TRD + Security + Frontend Spec + 99 tickets) is at a level typically seen in Series A startups, not hackathon teams. The three hardest technical problems (ASR/reading error disambiguation, classification ground truth, child data privacy) are explicitly identified and have concrete mitigation strategies documented. The project has strong portfolio value and genuine product-market potential.
 
 ---
 
@@ -181,7 +181,7 @@ The Security Analysis document is **remarkably thorough for a hackathon project*
 | **Regulatory mapping** | 🟢 Excellent | 5 regulations mapped (DPDP, COPPA, FERPA, GDPR, IT Act) with specific requirements per regulation ([Security §2.1](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L30-L38)) |
 | **"Diagnostic" legal risk** | 🟢 Excellent | Explicit strategy: internal = "diagnostic," external = "reading insights" + disclaimer ([Security §2.2](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L40-L48)) |
 | **Threat model (STRIDE)** | 🟢 Excellent | 10 threats with severity/likelihood/risk ratings ([Security §3.1](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L88-L101)) |
-| **OWASP Top 10 mapping** | 🟢 Excellent | All 10 categories assessed with specific Decodex exposure and controls ([Security §6.1](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L344-L357)) |
+| **OWASP Top 10 mapping** | 🟢 Excellent | All 10 categories assessed with specific Lexi exposure and controls ([Security §6.1](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L344-L357)) |
 | **Child-specific threats** | 🟢 Excellent | 5 child-specific threat vectors with mitigations — predatory collection, profile inference, content exposure, social comparison, peer account takeover ([Security §6.2](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L359-L367)) |
 | **Audio data lifecycle** | 🟢 Excellent | 5-stage lifecycle diagram showing audio is never persisted ([Security §4.3.2](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L192-L222)) |
 | **Authorization matrix** | 🟢 Excellent | 8-resource × 6-role matrix with granular permissions ([Security §4.2](file:///d:/New%20folder/documents/SECURITY_ANALYSIS.md#L168-L179)) |
@@ -390,7 +390,7 @@ This is an **outstanding** security posture for a hackathon project and would be
 
 ### Model Architecture
 
-Decodex uses LLMs as a **classification service**, not as a generative AI product. This is architecturally sound — the LLM is a replaceable component behind a well-defined prompt interface.
+Lexi uses LLMs as a **classification service**, not as a generative AI product. This is architecturally sound — the LLM is a replaceable component behind a well-defined prompt interface.
 
 | Dimension | Score | Analysis |
 |-----------|-------|----------|
@@ -421,7 +421,7 @@ Decodex uses LLMs as a **classification service**, not as a generative AI produc
 |-----------|--------|----------|
 | **Market viability** | 🟢 Strong | 35M addressable children in India alone; global dyslexia prevalence is 5–17%; education budgets are growing; India's NEP 2020 emphasizes learning assessment |
 | **Technical moat** | 🟡 Medium | The persistent error profile is a genuine moat mechanic — it gets more valuable per student over time. But the alignment + LLM classification pipeline is replicable by any team with the same idea. The real moat is **data**: error pattern corpus accumulated across thousands of students. |
-| **Competitive advantage** | 🟢 Strong | "Diagnostic-first vs. assistive-first" is a real, defensible positioning. Every competitor is in the "accommodate" box. Decodex is alone in the "diagnose + close the gap" box. |
+| **Competitive advantage** | 🟢 Strong | "Diagnostic-first vs. assistive-first" is a real, defensible positioning. Every competitor is in the "accommodate" box. Lexi is alone in the "diagnose + close the gap" box. |
 | **Monetization potential** | 🟢 Strong | B2C ($8–12/mo) × B2School ($2,000–4,000/student/year) is a credible two-track model. Unit economics (~90% gross margin) are excellent. |
 | **Scalability** | 🟡 Medium | Pipeline scales linearly with LLM costs. Fine-tuning a small classification model (Phase 3) would improve scalability dramatically. |
 | **Investor attractiveness** | 🟢 Strong | Edtech + AI + social impact = strong narrative. Specific market sizing (35M children) + clear whitespace + phased revenue model = investable. |
