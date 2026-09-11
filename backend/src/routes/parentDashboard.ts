@@ -74,7 +74,7 @@ router.get('/children/:studentId/progress', authenticate, requireParent, async (
     const recommendations: string[] = [];
     if (healthScore && healthScore.score < 60) {
       recommendations.push('Consider daily 10-minute reading practice');
-      recommendations.push('Use the Decodex practice drills after each session');
+      recommendations.push('Use the Lexi practice drills after each session');
     }
     if (screening && screening.risk !== 'low') {
       recommendations.push('Discuss screening results with the classroom teacher');

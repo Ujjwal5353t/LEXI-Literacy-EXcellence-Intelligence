@@ -1,5 +1,5 @@
 -- =============================================================================
--- Decodex Demo Seed Data
+-- Lexi Demo Seed Data
 -- Runs only when the users table is empty (see db/init.ts guard).
 -- All bcrypt hashes generated at cost 12 for password: password123
 -- =============================================================================
@@ -9,7 +9,7 @@
 -- ---------------------------------------------------------------------------
 
 INSERT INTO schools (id, name, district)
-VALUES ('99999999-9999-9999-9999-999999999999', 'Decodex Demo School', 'Demo District')
+VALUES ('99999999-9999-9999-9999-999999999999', 'Lexi Demo School', 'Demo District')
 ON CONFLICT (id) DO UPDATE
 SET name = EXCLUDED.name,
     district = EXCLUDED.district;
@@ -20,13 +20,13 @@ SET name = EXCLUDED.name,
 
 -- Original test student (kept for backward compatibility)
 INSERT INTO users (email, password_hash, role, display_name, school_id, grade_level, invite_code, date_of_birth) VALUES
-('student@decodex.com', '$2b$12$UbTLYYnuUKm8U3V5/U/UP.g.g0Ya2CA6.kKoFI.d6bG8zSsxKLBC.', 'student', 'Aarav', '99999999-9999-9999-9999-999999999999', 4, 'AARAV2026', '2016-04-15')
+('student@lexi.com', '$2b$12$UbTLYYnuUKm8U3V5/U/UP.g.g0Ya2CA6.kKoFI.d6bG8zSsxKLBC.', 'student', 'Aarav', '99999999-9999-9999-9999-999999999999', 4, 'AARAV2026', '2016-04-15')
 ON CONFLICT (email) DO NOTHING;
 
 -- Demo teacher
 INSERT INTO users (id, email, password_hash, role, display_name, school_id)
 VALUES ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
-        'teacher@decodex.com',
+        'teacher@lexi.com',
         '$2b$12$yIemge/MYhyjI.BAc4eDkeD1Ou2QuUJYsNCZ6oDbGHJ1Vtnnqmqqi',
         'teacher',
         'Ms. Rivera',
@@ -36,7 +36,7 @@ ON CONFLICT (email) DO NOTHING;
 -- Demo admin
 INSERT INTO users (id, email, password_hash, role, display_name)
 VALUES ('dddddddd-1111-2222-3333-444444444444',
-        'admin@decodex.com',
+        'admin@lexi.com',
         '$2b$12$yIemge/MYhyjI.BAc4eDkeD1Ou2QuUJYsNCZ6oDbGHJ1Vtnnqmqqi',
         'admin',
         'Admin User')
@@ -45,7 +45,7 @@ ON CONFLICT (email) DO NOTHING;
 -- Demo student (invite_code + date_of_birth for consent KBV flow)
 INSERT INTO users (id, email, password_hash, role, display_name, school_id, grade_level, invite_code, date_of_birth)
 VALUES ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb',
-        'demostudent@decodex.com',
+        'demostudent@lexi.com',
         '$2b$12$z4d5ohfZ4LBonaoA9ErWdu/wSswymg13ms/uCkExv.uir4oRYkkSO',
         'student',
         'Sam',
@@ -58,7 +58,7 @@ ON CONFLICT (email) DO NOTHING;
 -- Demo parent (pre-consented so demo works without live email)
 INSERT INTO users (id, email, password_hash, role, display_name)
 VALUES ('cccccccc-cccc-cccc-cccc-cccccccccccc',
-        'parent@decodex.com',
+        'parent@lexi.com',
         '$2b$12$iWn3Y7ACEAZK9Bk.qMWOg.IS2ecHTVkdv54X4OvPrxNuI5pLasAWa',
         'parent',
         'Jordan (Parent)')
@@ -352,20 +352,20 @@ VALUES (
 ON CONFLICT (id) DO NOTHING;
 
 -- ---------------------------------------------------------------------------
--- 8. Minimal Teacher Activity for teacher@decodex.com (V12 backfill signal)
+-- 8. Minimal Teacher Activity for teacher@lexi.com (V12 backfill signal)
 --    Creates 1 assignment assigned to both students in the demo school,
 --    so teacher_student_links backfill finds 2 real relationships.
 -- ---------------------------------------------------------------------------
 
 -- Create assignment by teacher for both demo students
 WITH teacher AS (
-  SELECT id FROM users WHERE email = 'teacher@decodex.com' AND deleted_at IS NULL
+  SELECT id FROM users WHERE email = 'teacher@lexi.com' AND deleted_at IS NULL
 ),
 student_aarav AS (
-  SELECT id FROM users WHERE email = 'student@decodex.com' AND deleted_at IS NULL
+  SELECT id FROM users WHERE email = 'student@lexi.com' AND deleted_at IS NULL
 ),
 student_sam AS (
-  SELECT id FROM users WHERE email = 'demostudent@decodex.com' AND deleted_at IS NULL
+  SELECT id FROM users WHERE email = 'demostudent@lexi.com' AND deleted_at IS NULL
 ),
 passage AS (
   SELECT id FROM passages WHERE title = 'The Cat in the Tree' LIMIT 1

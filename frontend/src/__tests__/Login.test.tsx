@@ -14,7 +14,7 @@ vi.mock('../lib/api', () => ({
 }));
 
 // Mock the logo import
-vi.mock('../assets/decodex-logo.png', () => ({ default: 'mock-logo.png' }));
+vi.mock('../assets/lexi-logo.png', () => ({ default: 'mock-logo.png' }));
 
 // Mock sonner toast
 vi.mock('sonner', () => ({
@@ -67,7 +67,7 @@ describe('Login Page', () => {
     renderLogin();
     
     const user = userEvent.setup();
-    await user.type(screen.getByLabelText(/email address/i), 'test@decodex.com');
+    await user.type(screen.getByLabelText(/email address/i), 'test@lexi.com');
     await user.type(screen.getByLabelText(/password/i), 'wrongpassword');
     await user.click(screen.getByRole('button', { name: /log in/i }));
 
@@ -78,20 +78,20 @@ describe('Login Page', () => {
 
   it('should call login on successful submission', async () => {
     mockApiFetch.mockResolvedValueOnce({
-      user: { id: '123', email: 'test@decodex.com', role: 'student', display_name: 'Test' },
+      user: { id: '123', email: 'test@lexi.com', role: 'student', display_name: 'Test' },
       token: 'fake-jwt',
     });
 
     renderLogin();
     
     const user = userEvent.setup();
-    await user.type(screen.getByLabelText(/email address/i), 'test@decodex.com');
+    await user.type(screen.getByLabelText(/email address/i), 'test@lexi.com');
     await user.type(screen.getByLabelText(/password/i), 'password123');
     await user.click(screen.getByRole('button', { name: /log in/i }));
 
     await waitFor(() => {
       expect(mockLogin).toHaveBeenCalledWith(
-        expect.objectContaining({ email: 'test@decodex.com' })
+        expect.objectContaining({ email: 'test@lexi.com' })
       );
     });
   });

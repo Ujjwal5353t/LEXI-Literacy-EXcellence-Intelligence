@@ -159,7 +159,7 @@ class SupabaseStorage implements AudioStorageProvider {
   private client: any;
 
   constructor() {
-    this.bucket = process.env.AUDIO_STORAGE_BUCKET || 'decodex-audio';
+    this.bucket = process.env.AUDIO_STORAGE_BUCKET || 'lexi-audio';
     this.initClient();
   }
 

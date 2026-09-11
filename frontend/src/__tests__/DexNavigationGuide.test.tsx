@@ -27,7 +27,7 @@ vi.mock('../context/AuthContext', () => ({
   useAuth: () => ({
     user: {
       id: 'student-123',
-      email: 'student@decodex.com',
+      email: 'student@lexi.com',
       role: 'student' as const,
       display_name: 'Test Student',
     },

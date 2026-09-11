@@ -1,4 +1,4 @@
--- Decodex Schema V1
+-- Lexi Schema V1
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
