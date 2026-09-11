@@ -9,7 +9,7 @@ Lexi captures students reading aloud, transcribes via Whisper, aligns against so
 
 ---
 
-## Live Demo
+Live Demo
 
 | Component | URL |
 |-----------|-----|
