@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { apiFetch } from '../lib/api';
-import decodexLogo from '../assets/decodex-logo.jpg';
+import decodexLogo from '../assets/decodex-logo.png';
 
 type AccountType = 'student' | 'parent';
 const fieldControlClass = 'h-12 w-full glass-input rounded-xl px-4 font-body text-base text-on-surface outline-none transition-all focus:outline-none';

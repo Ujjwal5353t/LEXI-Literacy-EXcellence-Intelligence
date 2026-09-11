@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { useAuth } from '../context/AuthContext';
 import { apiFetch } from '../lib/api';
-import decodexLogo from '../assets/decodex-logo.jpg';
+import decodexLogo from '../assets/decodex-logo.png';
 
 export default function Login() {
   const [email, setEmail] = useState('');
