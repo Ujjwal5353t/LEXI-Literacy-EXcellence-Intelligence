@@ -1,0 +1,32 @@
+node_modules/
+dist/
+.env
+.env.local
+coverage/
+uploads/
+*.log
+.DS_Store
+.venv/
+__pycache__/
+dump.rdb
+scratch/
+audio-storage/
+
+# AI agent tooling — not part of the app
+.agents/
+.cursor/
+.claude/
+agent/
+CLAUDE.md
+skills-lock.json
+
+# Temporary / test scripts
+cookies.txt
+app.py
+simple_visual_test.py
+visual_test.py
+visual_analysis.py
+test_login.ps1
+test_login.sh
+tools/
+
