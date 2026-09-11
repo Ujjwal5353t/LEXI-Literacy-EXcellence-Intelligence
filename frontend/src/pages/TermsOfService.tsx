@@ -20,7 +20,7 @@ export default function TermsOfService() {
                 <span className="material-symbols-outlined text-sm">gavel</span>
                 Terms & Conditions
               </div>
-              <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-primary">Decodex Terms of Service</h1>
+              <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-primary">Lexi Terms of Service</h1>
               <p className="font-body text-sm text-on-surface-variant mt-2 student-text">
                 <strong>Effective Date:</strong> August 8, 2026 | <strong>Governing Law:</strong> Laws of the Republic of India
               </p>
@@ -38,7 +38,7 @@ export default function TermsOfService() {
             "This is an educational screening tool, not a medical diagnosis. Consult a qualified specialist for clinical assessment."
           </p>
           <p className="font-body text-xs text-on-surface-variant mt-2 leading-relaxed student-text">
-            Decodex utilizes artificial intelligence and automated speech alignment algorithms to analyze oral reading fluency and classify error patterns using Orton-Gillingham educational concepts. Decodex is <strong>NOT</strong> a medical device, clinical diagnostic instrument, or healthcare service.
+            Lexi utilizes artificial intelligence and automated speech alignment algorithms to analyze oral reading fluency and classify error patterns using Orton-Gillingham educational concepts. Lexi is <strong>NOT</strong> a medical device, clinical diagnostic instrument, or healthcare service.
           </p>
         </section>
 
@@ -46,7 +46,7 @@ export default function TermsOfService() {
         <section className="space-y-3">
           <h2 className="font-display text-xl font-bold text-primary">1. Acceptance of Terms & Eligibility</h2>
           <p className="font-body text-sm sm:text-base leading-relaxed text-on-surface-variant student-text">
-            By creating an account, accessing, or using Decodex, you agree to be bound by these Terms of Service and our Privacy Policy.
+            By creating an account, accessing, or using Lexi, you agree to be bound by these Terms of Service and our Privacy Policy.
           </p>
           <ul className="list-disc pl-5 font-body text-xs sm:text-sm text-on-surface-variant space-y-2 leading-relaxed student-text">
             <li><strong>Minors (Students under 18):</strong> Students under 18 years of age cannot create accounts independently. Student accounts must be created by a parent, guardian, or authorized teacher.</li>
@@ -89,7 +89,7 @@ export default function TermsOfService() {
         <section className="space-y-3">
           <h2 className="font-display text-xl font-bold text-primary">4. Subscriptions, Payments & Intellectual Property</h2>
           <p className="font-body text-sm sm:text-base leading-relaxed text-on-surface-variant student-text">
-            Decodex is a paid software-as-a-service (SaaS) subscription platform. Fees are quoted in Indian Rupees (INR ₹) inclusive of applicable taxes. Decodex retains exclusive ownership of the platform, codebase, design system, and alignment algorithms. Users retain ownership of raw voice recordings and are granted a non-exclusive license to AI-generated practice drills and decodable stories.
+            Lexi is a paid software-as-a-service (SaaS) subscription platform. Fees are quoted in Indian Rupees (INR ₹) inclusive of applicable taxes. Lexi retains exclusive ownership of the platform, codebase, design system, and alignment algorithms. Users retain ownership of raw voice recordings and are granted a non-exclusive license to AI-generated practice drills and decodable stories.
           </p>
         </section>
 

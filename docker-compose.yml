@@ -1,28 +1,28 @@
 version: '3.8'
 
 services:
-  decodex-db:
+  lexi-db:
     image: postgres:15-alpine
-    container_name: decodex-db
+    container_name: lexi-db
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: decodex
+      POSTGRES_DB: lexi
     ports:
       - "5433:5432"
     volumes:
-      - decodex_pgdata:/var/lib/postgresql/data
+      - lexi_pgdata:/var/lib/postgresql/data
     restart: unless-stopped
 
-  decodex-redis:
+  lexi-redis:
     image: redis:7-alpine
-    container_name: decodex-redis
+    container_name: lexi-redis
     ports:
       - "6379:6379"
     volumes:
-      - decodex_redisdata:/data
+      - lexi_redisdata:/data
     restart: unless-stopped
 
 volumes:
-  decodex_pgdata:
-  decodex_redisdata:
+  lexi_pgdata:
+  lexi_redisdata:

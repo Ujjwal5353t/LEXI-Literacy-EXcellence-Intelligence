@@ -1,12 +1,12 @@
-# Decodex Demo Logins
+# Lexi Demo Logins
 
 All accounts use the password **`password123`**.
 
 | Role | Email | What it shows |
 |------|-------|---------------|
-| **Teacher** | `teacher@decodex.com` | Teacher Dashboard with class-wide analytics, Student Detail view with error breakdowns and drill history |
-| **Student** | `demostudent@decodex.com` | Student Dashboard with 2 completed reading sessions, Results page with annotated errors, and personalized drills |
-| **Parent** | `parent@decodex.com` | Parent view with pre-granted consent for the demo student (no email verification needed) |
+| **Teacher** | `teacher@lexi.com` | Teacher Dashboard with class-wide analytics, Student Detail view with error breakdowns and drill history |
+| **Student** | `demostudent@lexi.com` | Student Dashboard with 2 completed reading sessions, Results page with annotated errors, and personalized drills |
+| **Parent** | `parent@lexi.com` | Parent view with pre-granted consent for the demo student (no email verification needed) |
 
 > **Invite code** for the demo student (used in consent KBV flow): `DEMO01`
 >

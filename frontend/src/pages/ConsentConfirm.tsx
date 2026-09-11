@@ -74,7 +74,7 @@ export default function ConsentConfirm() {
   if (loading) return <ConsentShell><div className="stat-card p-8 text-center"><DexAvatar state="thinking" size="md" showCaptionBubble={true} caption="Checking your consent link…" /><p className="mt-4 font-body text-on-surface-variant student-text">Checking your consent link…</p></div></ConsentShell>;
   if (error && !tokenData) return <ConsentShell><ErrorState message={error} /></ConsentShell>;
   if (!tokenData) return null;
-  if (confirmed) return <ConsentShell><div className="stat-card p-7 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-center"><DexAvatar state="celebrating" size="lg" showCaptionBubble={true} caption="Consent confirmed! Recording is now enabled." /><h1 className="mt-3 font-display text-3xl font-bold">Consent confirmed</h1><p className="mt-2 font-body text-lg student-text">{tokenData.student.display_name} can now use Decodex recording features. You may close this page.</p></div></ConsentShell>;
+  if (confirmed) return <ConsentShell><div className="stat-card p-7 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-center"><DexAvatar state="celebrating" size="lg" showCaptionBubble={true} caption="Consent confirmed! Recording is now enabled." /><h1 className="mt-3 font-display text-3xl font-bold">Consent confirmed</h1><p className="mt-2 font-body text-lg student-text">{tokenData.student.display_name} can now use Lexi recording features. You may close this page.</p></div></ConsentShell>;
 
   return (
     <ConsentShell>

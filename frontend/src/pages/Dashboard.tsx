@@ -321,7 +321,7 @@ export default function Dashboard() {
         <motion.section variants={bouncyItemVariants} className="mb-10 grid gap-4 md:grid-cols-[1.1fr_1fr]">
           <div className="stat-card stat-card-hover">
             <p className="stat-label" style={{ color: 'var(--color-secondary)' }}>Share with a parent</p>
-            <p className="font-body text-on-surface-variant mt-2 student-text">Ask a parent to enter this invite code in their Decodex account.</p>
+            <p className="font-body text-on-surface-variant mt-2 student-text">Ask a parent to enter this invite code in their Lexi account.</p>
             <p className="mt-4 inline-block rounded-2xl bg-white/90 shadow-sm border border-primary/20 px-4 py-3 font-display text-xl font-bold tracking-[0.12em] text-primary">{consentStatus.invite_code || 'Invite code unavailable'}</p>
           </div>
           <div className={`stat-card stat-card-hover ${consentStatus.consent_granted ? 'border-l-emerald-500' : 'border-l-amber-500'}`}>

@@ -205,7 +205,7 @@ export default function LearningPathPage() {
           <span className="badge-cat cat-omi">🏆 Stage {stageNumber} Curriculum Mastered! (+500 Bonus XP Awarded)</span>
           <h2 className="font-display text-3xl font-extrabold text-on-surface mb-2">Congratulations! Stage {stageNumber} Finished!</h2>
           <p className="font-body text-base text-on-surface-variant max-w-xl mb-6 leading-relaxed student-text">
-            You completed all 20 interactive days of Stage {stageNumber}. Decodex has analyzed your newest reading speed and error reduction rates to adapt your next level!
+            You completed all 20 interactive days of Stage {stageNumber}. Lexi has analyzed your newest reading speed and error reduction rates to adapt your next level!
           </p>
           <button
             onClick={handleGenerate}
@@ -227,7 +227,7 @@ export default function LearningPathPage() {
           <span className="badge-cat cat-pac">Assessment Required ({currentSessions} / {requiredSessions} Completed)</span>
           <h3 className="font-display text-2xl font-bold text-on-surface mb-2">Complete Reading Assessments First</h3>
           <p className="font-body text-base text-on-surface-variant max-w-lg mb-6 leading-relaxed student-text">
-            To build a truly personalized day-by-day plan, Decodex needs at least {requiredSessions} reading assessment sessions to analyze your specific speech, speed, and error patterns.
+            To build a truly personalized day-by-day plan, Lexi needs at least {requiredSessions} reading assessment sessions to analyze your specific speech, speed, and error patterns.
           </p>
           <button
             onClick={() => navigate('/passages')}

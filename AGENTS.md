@@ -1,10 +1,10 @@
-# Decodex — Agent Guide
+# Lexi — Agent Guide
 
-> **Start here.** This file orients any AI agent working on the Decodex codebase. Read it first, then load the relevant project skills from `.cursor/skills/`.
+> **Start here.** This file orients any AI agent working on the Lexi codebase. Read it first, then load the relevant project skills from `.cursor/skills/`.
 
-## What Is Decodex?
+## What Is Lexi?
 
-Decodex is an AI-powered **diagnostic reading platform** for dyslexia education. Students read passages aloud; the system transcribes speech (Whisper), aligns it to source text, classifies errors using **Orton-Gillingham taxonomy** (GPT-4o-mini), generates personalized drills, and gives teachers actionable analytics with human-in-the-loop override capability.
+Lexi is an AI-powered **diagnostic reading platform** for dyslexia education. Students read passages aloud; the system transcribes speech (Whisper), aligns it to source text, classifies errors using **Orton-Gillingham taxonomy** (GPT-4o-mini), generates personalized drills, and gives teachers actionable analytics with human-in-the-loop override capability.
 
 **Repo type:** Monorepo — `backend/` (Express/TS) + `frontend/` (React/Vite) + `documents/` (specs)
 
@@ -23,27 +23,27 @@ All skills live in `.cursor/skills/`. Load the skill that matches your task:
 
 | Skill | Path | Use when… |
 |-------|------|-----------|
-| **decodex-overview** | `.cursor/skills/decodex-overview/SKILL.md` | Onboarding, architecture questions, finding where code lives |
-| **decodex-ai-pipeline** | `.cursor/skills/decodex-ai-pipeline/SKILL.md` | STT, alignment, classification, caching, circuit breakers, worker |
-| **decodex-backend** | `.cursor/skills/decodex-backend/SKILL.md` | API routes, middleware, DB queries, auth, queue, uploads |
-| **decodex-frontend** | `.cursor/skills/decodex-frontend/SKILL.md` | Pages, components, hooks, SSE, AuthContext, Tailwind UI |
-| **decodex-domain** | `.cursor/skills/decodex-domain/SKILL.md` | O-G error categories, LLM prompts, teacher feedback, pedagogy |
-| **decodex-dev-workflow** | `.cursor/skills/decodex-dev-workflow/SKILL.md` | Setup, Docker, env vars, test accounts, debugging |
+| **lexi-overview** | `.cursor/skills/lexi-overview/SKILL.md` | Onboarding, architecture questions, finding where code lives |
+| **lexi-ai-pipeline** | `.cursor/skills/lexi-ai-pipeline/SKILL.md` | STT, alignment, classification, caching, circuit breakers, worker |
+| **lexi-backend** | `.cursor/skills/lexi-backend/SKILL.md` | API routes, middleware, DB queries, auth, queue, uploads |
+| **lexi-frontend** | `.cursor/skills/lexi-frontend/SKILL.md` | Pages, components, hooks, SSE, AuthContext, Tailwind UI |
+| **lexi-domain** | `.cursor/skills/lexi-domain/SKILL.md` | O-G error categories, LLM prompts, teacher feedback, pedagogy |
+| **lexi-dev-workflow** | `.cursor/skills/lexi-dev-workflow/SKILL.md` | Setup, Docker, env vars, test accounts, debugging |
 
 ### Skill Selection Guide
 
 ```
-"What does this project do?"           → decodex-overview
-"How does the AI pipeline work?"       → decodex-ai-pipeline
-"Add/modify an API endpoint"           → decodex-backend (+ decodex-domain if classification)
-"Build/fix a UI page or component"     → decodex-frontend (+ decodex-domain if error labels)
-"Change error categories or prompts"   → decodex-domain + decodex-ai-pipeline
-"Run locally / deploy / env issues"    → decodex-dev-workflow
+"What does this project do?"           → lexi-overview
+"How does the AI pipeline work?"       → lexi-ai-pipeline
+"Add/modify an API endpoint"           → lexi-backend (+ lexi-domain if classification)
+"Build/fix a UI page or component"     → lexi-frontend (+ lexi-domain if error labels)
+"Change error categories or prompts"   → lexi-domain + lexi-ai-pipeline
+"Run locally / deploy / env issues"    → lexi-dev-workflow
 ```
 
 ## Community Skills (skills.sh / npm)
 
-Decodex also carries a locked set of community skills installed via the `skills` npm CLI. They live in `.agents/skills/` and are restored from `skills-lock.json`.
+Lexi also carries a locked set of community skills installed via the `skills` npm CLI. They live in `.agents/skills/` and are restored from `skills-lock.json`.
 
 ```bash
 npm run skills:install   # restore locked community skills
@@ -51,16 +51,16 @@ npm run skills:list      # inspect installed project skills
 npm run skills:update    # intentionally refresh from upstream
 ```
 
-Use community skills as supplements, not replacements: Decodex-specific skills remain authoritative for product behavior, API conventions, O-G taxonomy, privacy, and security rules.
+Use community skills as supplements, not replacements: Lexi-specific skills remain authoritative for product behavior, API conventions, O-G taxonomy, privacy, and security rules.
 
-| Community skill | Source | Pair with Decodex skill(s) | Use when... |
+| Community skill | Source | Pair with Lexi skill(s) | Use when... |
 |-----------------|--------|----------------------------|-------------|
-| `frontend-design` | `anthropics/skills` | `decodex-frontend` | Creating or reshaping polished UI while keeping Decodex's product tone |
-| `vercel-react-best-practices` | `vercel-labs/agent-skills` | `decodex-frontend` | Writing or reviewing React/Vite components, hooks, routing, and data-fetching patterns |
-| `webapp-testing` | `anthropics/skills` | `decodex-frontend`, `decodex-dev-workflow` | Verifying local frontend behavior with Playwright screenshots, DOM checks, and browser logs |
-| `e2e-testing-patterns` | `wshobson/agents` | `decodex-frontend`, `decodex-dev-workflow` | Designing focused E2E coverage for login, session recording, results, and teacher flows |
-| `nodejs-backend-patterns` | `wshobson/agents` | `decodex-backend`, `decodex-ai-pipeline` | Building or reviewing Express middleware, REST APIs, auth, jobs, and service boundaries |
-| `typescript-advanced-types` | `wshobson/agents` | `decodex-backend`, `decodex-frontend` | Tightening shared TypeScript contracts, discriminated unions, generic helpers, and API result types |
+| `frontend-design` | `anthropics/skills` | `lexi-frontend` | Creating or reshaping polished UI while keeping Lexi's product tone |
+| `vercel-react-best-practices` | `vercel-labs/agent-skills` | `lexi-frontend` | Writing or reviewing React/Vite components, hooks, routing, and data-fetching patterns |
+| `webapp-testing` | `anthropics/skills` | `lexi-frontend`, `lexi-dev-workflow` | Verifying local frontend behavior with Playwright screenshots, DOM checks, and browser logs |
+| `e2e-testing-patterns` | `wshobson/agents` | `lexi-frontend`, `lexi-dev-workflow` | Designing focused E2E coverage for login, session recording, results, and teacher flows |
+| `nodejs-backend-patterns` | `wshobson/agents` | `lexi-backend`, `lexi-ai-pipeline` | Building or reviewing Express middleware, REST APIs, auth, jobs, and service boundaries |
+| `typescript-advanced-types` | `wshobson/agents` | `lexi-backend`, `lexi-frontend` | Tightening shared TypeScript contracts, discriminated unions, generic helpers, and API result types |
 
 Cursor-specific discovery is mirrored in `.cursor/rules/agent-discovery.mdc`.
 
@@ -110,7 +110,7 @@ Cursor-specific discovery is mirrored in `.cursor/rules/agent-discovery.mdc`.
 | PAC | Pacing / self-correction |
 | UNC | Uncertain |
 
-Full definitions: see `decodex-domain` skill.
+Full definitions: see `lexi-domain` skill.
 
 ## Local Development (Quick Reference)
 
@@ -125,11 +125,11 @@ cd backend && cp .env.example .env && npm install && npm run dev
 cd frontend && npm install && npm run dev
 ```
 
-**Test accounts:** `student@decodex.com` / `teacher@decodex.com` — password `password123`
+**Test accounts:** `student@lexi.com` / `teacher@lexi.com` — password `password123`
 
 **Production:** `docker compose -f docker-compose.prod.yml up --build -d` → http://localhost
 
-Details: `decodex-dev-workflow` skill.
+Details: `lexi-dev-workflow` skill.
 
 ## Key Documents
 

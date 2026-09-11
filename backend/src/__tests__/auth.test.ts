@@ -16,7 +16,7 @@ describe('Auth Routes', () => {
       mockQuery.mockResolvedValueOnce({
         rows: [{
           id: TEST_USERS.studentA.id,
-          email: 'new@decodex.com',
+          email: 'new@lexi.com',
           role: 'student',
           display_name: 'New Student',
         }],
@@ -25,14 +25,14 @@ describe('Auth Routes', () => {
       const res = await request(app)
         .post('/api/v1/auth/register')
         .send({
-          email: 'new@decodex.com',
+          email: 'new@lexi.com',
           password: 'securepass123',
           display_name: 'New Student',
           grade_level: 3,
         });
 
       expect(res.status).toBe(201);
-      expect(res.body.user.email).toBe('new@decodex.com');
+      expect(res.body.user.email).toBe('new@lexi.com');
       expect(res.body.user.role).toBe('student');
       expect(res.body.token).toBeDefined();
       // httpOnly cookie should be set
@@ -46,7 +46,7 @@ describe('Auth Routes', () => {
       const res = await request(app)
         .post('/api/v1/auth/register')
         .send({
-          email: 'exists@decodex.com',
+          email: 'exists@lexi.com',
           password: 'securepass123',
           display_name: 'Duplicate',
         });
@@ -58,7 +58,7 @@ describe('Auth Routes', () => {
     it('should reject missing required fields', async () => {
       const res = await request(app)
         .post('/api/v1/auth/register')
-        .send({ email: 'test@decodex.com' }); // missing password and display_name
+        .send({ email: 'test@lexi.com' }); // missing password and display_name
 
       expect(res.status).toBe(400);
       expect(res.body.error.code).toBe('VALIDATION_ERROR');
@@ -82,7 +82,7 @@ describe('Auth Routes', () => {
       const res = await request(app)
         .post('/api/v1/auth/register')
         .send({
-          email: 'test@decodex.com',
+          email: 'test@lexi.com',
           password: 'short',
           display_name: 'Test',
         });
@@ -99,7 +99,7 @@ describe('Auth Routes', () => {
       mockQuery.mockResolvedValueOnce({
         rows: [{
           id: TEST_USERS.studentA.id,
-          email: 'student@decodex.com',
+          email: 'student@lexi.com',
           password_hash: passwordHash,
           role: 'student',
           display_name: 'Test Student',
@@ -108,10 +108,10 @@ describe('Auth Routes', () => {
 
       const res = await request(app)
         .post('/api/v1/auth/login')
-        .send({ email: 'student@decodex.com', password: 'password123' });
+        .send({ email: 'student@lexi.com', password: 'password123' });
 
       expect(res.status).toBe(200);
-      expect(res.body.user.email).toBe('student@decodex.com');
+      expect(res.body.user.email).toBe('student@lexi.com');
       expect(res.body.token).toBeDefined();
     });
 
@@ -120,7 +120,7 @@ describe('Auth Routes', () => {
       mockQuery.mockResolvedValueOnce({
         rows: [{
           id: TEST_USERS.studentA.id,
-          email: 'student@decodex.com',
+          email: 'student@lexi.com',
           password_hash: passwordHash,
           role: 'student',
           display_name: 'Test Student',
@@ -129,7 +129,7 @@ describe('Auth Routes', () => {
 
       const res = await request(app)
         .post('/api/v1/auth/login')
-        .send({ email: 'student@decodex.com', password: 'wrongpassword' });
+        .send({ email: 'student@lexi.com', password: 'wrongpassword' });
 
       expect(res.status).toBe(401);
       expect(res.body.error.code).toBe('UNAUTHORIZED');
@@ -138,7 +138,7 @@ describe('Auth Routes', () => {
     it('should reject missing fields', async () => {
       const res = await request(app)
         .post('/api/v1/auth/login')
-        .send({ email: 'student@decodex.com' }); // missing password
+        .send({ email: 'student@lexi.com' }); // missing password
 
       expect(res.status).toBe(400);
       expect(res.body.error.code).toBe('VALIDATION_ERROR');
@@ -169,7 +169,7 @@ describe('Auth Routes', () => {
       mockQuery.mockResolvedValueOnce({
         rows: [{
           id: TEST_USERS.studentA.id,
-          email: 'student@decodex.com',
+          email: 'student@lexi.com',
           role: 'student',
           display_name: 'Test Student',
         }],
@@ -192,7 +192,7 @@ describe('Auth Routes', () => {
       mockQuery.mockResolvedValueOnce({
         rows: [{
           id: TEST_USERS.studentA.id,
-          email: 'student@decodex.com',
+          email: 'student@lexi.com',
           role: 'student',
           display_name: 'Test Student',
           preferred_language: 'hi',
@@ -216,7 +216,7 @@ describe('Auth Routes', () => {
       mockQuery.mockResolvedValueOnce({
         rows: [{
           id: TEST_USERS.studentA.id,
-          email: 'student@decodex.com',
+          email: 'student@lexi.com',
           role: 'student',
           display_name: 'Test Student',
           preferred_language: 'en',

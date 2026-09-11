@@ -1,17 +1,17 @@
-﻿# Decodex Terms of Service
+﻿# Lexi Terms of Service
 
 **Effective Date:** August 8, 2026  
 **Last Updated:** August 8, 2026  
 **Governing Law:** Laws of the Republic of India  
 **Jurisdiction:** Courts of New Delhi, India  
 
-Welcome to Decodex. These Terms of Service ("**Terms**") constitute a legally binding agreement between **Decodex** ("**Platform**", "**we**", "**us**") and you ("**User**", "**you**", or "**your**", whether a Student, Parent, Teacher, or School Administrator).
+Welcome to Lexi. These Terms of Service ("**Terms**") constitute a legally binding agreement between **Lexi** ("**Platform**", "**we**", "**us**") and you ("**User**", "**you**", or "**your**", whether a Student, Parent, Teacher, or School Administrator).
 
 ---
 
 ## 1. Acceptance of Terms & Eligibility
 
-1. **Acceptance:** By creating an account, accessing, or using Decodex, you agree to be bound by these Terms and our Privacy Policy.
+1. **Acceptance:** By creating an account, accessing, or using Lexi, you agree to be bound by these Terms and our Privacy Policy.
 2. **Age Eligibility:** 
    * **Students (Minors):** Students under 18 years of age are not permitted to create accounts independently. Student accounts must be created by a parent, legal guardian, or authorized school teacher.
    * **Adult Account Holders:** Parent and Teacher account holders must be at least 18 years of age and legally competent to enter into binding contracts under the **Indian Contract Act, 1872**.
@@ -21,12 +21,12 @@ Welcome to Decodex. These Terms of Service ("**Terms**") constitute a legally bi
 
 ## 2. Mandatory Disclaimer — Screening vs. Medical Diagnosis
 
-The following disclaimer applies to all surfaces of the Decodex Platform, including web dashboards, PDF exports, and AI-generated progress summaries:
+The following disclaimer applies to all surfaces of the Lexi Platform, including web dashboards, PDF exports, and AI-generated progress summaries:
 
 > **⚠️ MANDATORY LEGAL DISCLAIMER**  
 > **"This is an educational screening tool, not a medical diagnosis. Consult a qualified specialist for clinical assessment."**  
 >  
-> Decodex utilizes artificial intelligence and automated speech alignment algorithms to analyze oral reading fluency and classify error patterns using Orton-Gillingham educational concepts. Decodex is **NOT** a medical device, clinical diagnostic instrument, or healthcare service. Nothing contained on the Platform constitutes medical advice, clinical diagnosis, or treatment of dyslexia, dyspraxia, or any learning disorder.
+> Lexi utilizes artificial intelligence and automated speech alignment algorithms to analyze oral reading fluency and classify error patterns using Orton-Gillingham educational concepts. Lexi is **NOT** a medical device, clinical diagnostic instrument, or healthcare service. Nothing contained on the Platform constitutes medical advice, clinical diagnosis, or treatment of dyslexia, dyspraxia, or any learning disorder.
 
 ---
 
@@ -45,14 +45,14 @@ The following disclaimer applies to all surfaces of the Decodex Platform, includ
 
 1. **Consent Requirement:** Microphone recording and speech processing features are strictly disabled until a parent or guardian completes the consent verification workflow.
 2. **Knowledge-Based Verification:** Parents confirm relationship and consent by supplying student invite codes and matching date-of-birth records.
-3. **Consent Validity & Renewal:** Parental consent remains valid for **365 days** from the date of confirmation. Decodex will prompt the parent for annual re-consent. If re-consent is not granted, microphone recording privileges are suspended.
+3. **Consent Validity & Renewal:** Parental consent remains valid for **365 days** from the date of confirmation. Lexi will prompt the parent for annual re-consent. If re-consent is not granted, microphone recording privileges are suspended.
 4. **Consent Withdrawal:** A parent may withdraw consent at any time through the Parent Portal. Consent withdrawal initiates a **30-day grace period**, after which all associated session recordings, transcripts, and error profiles are permanently deleted (`hard_delete_at`).
 
 ---
 
 ## 5. Subscriptions, Payments & Billing
 
-1. **Paid Product:** Decodex is a paid software-as-a-service (SaaS) subscription platform offered to parents (B2C) and schools/districts (B2School).
+1. **Paid Product:** Lexi is a paid software-as-a-service (SaaS) subscription platform offered to parents (B2C) and schools/districts (B2School).
 2. **Billing Terms:** Subscriptions are billed on a recurring monthly or annual basis. Fees are quoted in Indian Rupees (INR ₹) for Indian users, inclusive of applicable Goods and Services Tax (GST).
 3. **Refund Policy:** B2C monthly subscriptions may be canceled at any time, taking effect at the end of the current billing cycle. No pro-rated refunds are issued for partial billing periods unless required by applicable Indian consumer protection laws.
 
@@ -71,17 +71,17 @@ Users agree **NOT** to:
 
 ## 7. Intellectual Property Rights
 
-1. **Decodex Ownership:** The Platform, codebase, design system, UI layout, logo, domain names, Orton-Gillingham prompt classification taxonomy, and algorithms are the exclusive intellectual property of Decodex.
+1. **Lexi Ownership:** The Platform, codebase, design system, UI layout, logo, domain names, Orton-Gillingham prompt classification taxonomy, and algorithms are the exclusive intellectual property of Lexi.
 2. **AI-Generated Content:** Practice drills, AI-generated decodable stories, and Copilot intervention roadmaps generated by the Platform are licensed to active Users under a non-exclusive, non-transferable, personal license for educational use only.
-3. **User Content & Audio License:** Users retain ownership of their raw voice recordings. By uploading audio to the Platform, the parent/user grants Decodex a limited, worldwide, royalty-free license to store, process, transcribe, and playback the audio solely for delivering educational services to the User.
+3. **User Content & Audio License:** Users retain ownership of their raw voice recordings. By uploading audio to the Platform, the parent/user grants Lexi a limited, worldwide, royalty-free license to store, process, transcribe, and playback the audio solely for delivering educational services to the User.
 
 ---
 
 ## 8. Limitation of Liability
 
-1. **As-Is Provision:** Decodex is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, express or implied.
-2. **No Clinical Reliance:** Decodex shall not be liable for any educational, academic, psychological, or medical decisions made by parents, teachers, or schools based on risk screening indicators or AI-generated suggestions.
-3. **Liability Cap:** To the maximum extent permitted under Indian law, Decodex’s total aggregate liability for any claims arising out of these Terms shall not exceed the total fees paid by the User to Decodex during the three (3) months preceding the claim.
+1. **As-Is Provision:** Lexi is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, express or implied.
+2. **No Clinical Reliance:** Lexi shall not be liable for any educational, academic, psychological, or medical decisions made by parents, teachers, or schools based on risk screening indicators or AI-generated suggestions.
+3. **Liability Cap:** To the maximum extent permitted under Indian law, Lexi’s total aggregate liability for any claims arising out of these Terms shall not exceed the total fees paid by the User to Lexi during the three (3) months preceding the claim.
 
 ---
 

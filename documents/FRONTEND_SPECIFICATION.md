@@ -1,4 +1,4 @@
-# Decodex — Frontend Specification Document
+# Lexi — Frontend Specification Document
 
 **Version:** 1.0  
 **Date:** 2026-07-19  
@@ -9,7 +9,7 @@
 
 ## 1. Overview
 
-The Decodex frontend is a **React Single Page Application (SPA)** built with Vite. It handles microphone capture, real-time feedback during reading sessions, result visualization, and dashboards for three distinct user roles: Student, Teacher, and Parent.
+The Lexi frontend is a **React Single Page Application (SPA)** built with Vite. It handles microphone capture, real-time feedback during reading sessions, result visualization, and dashboards for three distinct user roles: Student, Teacher, and Parent.
 
 ---
 
@@ -234,12 +234,12 @@ The Decodex frontend is a **React Single Page Application (SPA)** built with Vit
 **Elements:**
 | Element | Description |
 |---------|-------------|
-| Logo + tagline | "Decodex — Find the gap. Close the gap." |
+| Logo + tagline | "Lexi — Find the gap. Close the gap." |
 | Login form | Email + password fields, "Remember me" checkbox |
 | Social login | Google OAuth button (Phase 2) |
 | Role selector | Toggle: "I'm a Student" / "I'm a Teacher" / "I'm a Parent" |
 | Register link | "Don't have an account? Sign up" |
-| Footer disclaimer | "Decodex is an educational screening tool, not a clinical diagnosis." |
+| Footer disclaimer | "Lexi is an educational screening tool, not a clinical diagnosis." |
 
 **Animations:**
 - Logo entrance: fade-in + scale from 0.8 → 1.0 (400ms ease-out)

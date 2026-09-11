@@ -116,7 +116,7 @@ export default function ParentHome() {
         method: 'POST',
         body: JSON.stringify({ student_id: studentId }),
       });
-      setNotice({ studentId, message: `Consent granted! ${studentName} can now record audio in Decodex.` });
+      setNotice({ studentId, message: `Consent granted! ${studentName} can now record audio in Lexi.` });
       await loadChildren();
     } catch (grantError) {
       setError(grantError instanceof Error ? grantError.message : 'Unable to grant consent. Please try again.');
@@ -366,7 +366,7 @@ export default function ParentHome() {
       {/* Link Child Form */}
       <motion.section variants={itemVariants} className="stat-card stat-card-hover rounded-3xl p-6 sm:p-8 shadow-sm mb-8" style={{ borderLeftColor: 'var(--color-primary)' }}>
         <h2 className="font-display text-2xl font-bold text-on-surface">Link a Child Account</h2>
-        <p className="mt-1 font-body text-on-surface-variant text-sm student-text">Enter the invite code shown in your child's Decodex dashboard.</p>
+        <p className="mt-1 font-body text-on-surface-variant text-sm student-text">Enter the invite code shown in your child's Lexi dashboard.</p>
         <form onSubmit={linkChild} className="mt-4 flex flex-col gap-3 sm:flex-row">
           <input
             value={inviteCode}

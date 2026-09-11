@@ -1,5 +1,5 @@
 -- =============================================================================
--- Decodex Schema V4 — Streak Freeze Mechanism
+-- Lexi Schema V4 — Streak Freeze Mechanism
 -- Run AFTER migration_v3.sql has been applied.
 -- =============================================================================
 

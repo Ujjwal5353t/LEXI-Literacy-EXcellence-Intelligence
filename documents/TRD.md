@@ -1,4 +1,4 @@
-# Decodex — Technical Requirements Document (TRD)
+# Lexi — Technical Requirements Document (TRD)
 
 **Version:** 1.0  
 **Date:** 2026-07-19  
@@ -9,7 +9,7 @@
 
 ## 1. System Overview
 
-Decodex is a web-based diagnostic reading platform built as a **React SPA** that captures student audio, transcribes it via STT, aligns the transcript against source text, classifies reading errors using an LLM, generates targeted drills, and persists an evolving per-student error profile for teacher/parent consumption.
+Lexi is a web-based diagnostic reading platform built as a **React SPA** that captures student audio, transcribes it via STT, aligns the transcript against source text, classifies reading errors using an LLM, generates targeted drills, and persists an evolving per-student error profile for teacher/parent consumption.
 
 ### 1.1 High-Level Architecture
 
@@ -622,7 +622,7 @@ NODE_ENV=development
 PORT=3001
 
 # Database
-DATABASE_URL=postgresql://user:pass@host:5432/decodex
+DATABASE_URL=postgresql://user:pass@host:5432/lexi
 
 # Redis (job queue + cache)
 REDIS_URL=redis://localhost:6379

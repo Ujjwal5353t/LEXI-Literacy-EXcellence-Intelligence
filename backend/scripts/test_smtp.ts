@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
 transporter.sendMail({
   from: process.env.GMAIL_USER,
   to: 'ashmeet.singh.talwar1@gmail.com',
-  subject: 'Decodex Diagnostic Test',
+  subject: 'Lexi Diagnostic Test',
   text: 'This is a raw test to verify SMTP delivery is working.'
 }, (err, info) => {
   if (err) {

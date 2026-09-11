@@ -140,10 +140,10 @@ async function main(): Promise<void> {
   const forceFlag = args.includes('--force');
   const yesFlag = args.includes('--yes');
 
-  console.log('=== Decodex Database Reset Script ===\n');
+  console.log('=== Lexi Database Reset Script ===\n');
 
   const dbEnv = getDatabaseEnvironment();
-  const dbUrl = process.env.DATABASE_URL || 'postgresql://postgres:password@localhost:5432/decodex';
+  const dbUrl = process.env.DATABASE_URL || 'postgresql://postgres:password@localhost:5432/lexi';
   const maskedUrl = dbUrl.replace(/\/\/([^:]+):([^@]+)@/, '//***:***@');
 
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);

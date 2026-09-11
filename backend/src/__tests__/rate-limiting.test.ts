@@ -18,7 +18,7 @@ describe('Rate Limiting', () => {
     for (let i = 0; i < 52; i++) {
       const res = await agent
         .post('/api/v1/auth/login')
-        .send({ email: 'test@decodex.com', password: 'password123' });
+        .send({ email: 'test@lexi.com', password: 'password123' });
       responses.push(res.status);
     }
 
@@ -30,7 +30,7 @@ describe('Rate Limiting', () => {
     // Verify the 429 response has the correct error shape
     const lastRes = await agent
       .post('/api/v1/auth/login')
-      .send({ email: 'test@decodex.com', password: 'password123' });
+      .send({ email: 'test@lexi.com', password: 'password123' });
 
     if (lastRes.status === 429) {
       expect(lastRes.body.error.code).toBe('RATE_LIMITED');
