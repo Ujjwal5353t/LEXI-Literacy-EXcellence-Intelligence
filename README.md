@@ -9,7 +9,7 @@ Decodex captures students reading aloud, transcribes via Whisper, aligns against
 
 ---
 
-## Live Demo
+Live Demo
 
 | Component | URL |
 |-----------|-----|
